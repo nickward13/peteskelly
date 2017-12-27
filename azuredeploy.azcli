@@ -1,11 +1,10 @@
-#!/bin/bash
-export resource_group=peteskelly  
-export resource_location=australiasoutheast  
-export storage_acct=hectsecurefuncstorage8
-export storage_sku=Standard_LRS  
-export functionapp_name=hectsecurefuncapp8  
-export adapp_apiname=securefuncappapi8  
-export adpp_clientname=securefuncappclient8
+$resource_group=peteskelly  
+$resource_location=australiasoutheast  
+$storage_acct=hectsecurefuncstorage8
+$storage_sku=Standard_LRS  
+$functionapp_name=hectsecurefuncapp8  
+$adapp_apiname=securefuncappapi8  
+$adpp_clientname=securefuncappclient8
 
 # Create a resource group 
 az group create -n $resource_group -l $resource_location -o json 
