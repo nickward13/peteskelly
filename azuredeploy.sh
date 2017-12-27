@@ -1,9 +1,9 @@
 #!/bin/bash
 export resource_group=peteskelly  
 export resource_location=australiasoutheast  
-export storage_acct=securefuncstorage8
+export storage_acct=hectsecurefuncstorage8
 export storage_sku=Standard_LRS  
-export functionapp_name=securefuncapp8  
+export functionapp_name=hectsecurefuncapp8  
 export adapp_apiname=securefuncappapi8  
 export adpp_clientname=securefuncappclient8
 
