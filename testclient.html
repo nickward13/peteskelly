@@ -1,0 +1,38 @@
+<!DOCTYPE html>  
+<html lang="en">
+
+<head>  
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Simple JavaScript call</title>
+  <script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+</head>
+
+<body>  
+  Check the console logs...
+  <table id="players">
+  </table>
+  <script>
+    var settings = {
+      "async": true,
+      "crossDomain": true,
+      "url": "https://hectsecurefuncapp8.azurewebsites.net/api/GetGolfers",
+      "method": "GET"
+    }
+
+    $.ajax(settings).done(function (response) {
+      $(function() {
+        $.each(response, function(i, item) {
+            var tr = $('<tr>').append(
+                $('<td>').text(item.id),
+                $('<td>').text(item.firstName),
+                $('<td>').text(item.lastName)
+            ).appendTo('#players');
+            console.log(item);
+        });
+    });    });
+  </script>
+</body>
+
+</html>  
